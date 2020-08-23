@@ -178,11 +178,6 @@ a {
 }
 
 @media all and (max-width: 1280px) {
-  .block:nth-child(2) {
-    float: right;
-    margin-right: 80px;
-  }
-
   .block:last-child {
     float: left;
   }
