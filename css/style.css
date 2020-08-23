@@ -11,6 +11,9 @@ body {
   width: 100%;
   max-width: 1280px;
   margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
 }
 
 img {
@@ -33,7 +36,6 @@ h1 {
 
 h2 {
   padding-top: 36px;
-  padding-bottom: 20px;
   color: white;
   text-align: center;
   font-weight: normal;
@@ -99,10 +101,10 @@ a {
 
 .block {
   width: 312px;
-  height: 501px;
+  height: 500px;
   float: left;
-  margin-left: 80px;
-  margin-bottom: 80px;
+  margin: 40px;
+  margin-top: 20px;
   text-align: center;
 }
 
@@ -170,24 +172,4 @@ a {
   transform: rotate(-45deg);
   top: 28px;
   left: -16px;
-}
-
-.block:last-child {
-  float: right;
-  margin-right: 80px;
-}
-
-@media all and (max-width: 1280px) {
-  .block:last-child {
-    float: left;
-  }
-}
-@media all and (max-width: 900px) {
-  .block {
-    float: none;
-  }
-
-  .block:nth-child(2) {
-    float: none;
-  }
 }

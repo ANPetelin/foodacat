@@ -16,7 +16,10 @@ body {
 .container {
     width: 100%;
     max-width: 1280px;
-    margin: 0 auto;	
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;	
 }
 
 img {
@@ -39,7 +42,6 @@ h1 {
 
 h2 {
       padding-top: 36px;
-      padding-bottom: 20px;
       color: white;
       text-align: center;
       font-weight: normal;
@@ -105,10 +107,10 @@ a {
 
 .block {
       width: 312px;
-      height: 501px;
+      height: 500px;
       float: left;      
-      margin-left: $indent;
-      margin-bottom: $indent;
+      margin: $indent/2;
+      margin-top: $indent/4;
       text-align: center;
 }
 
@@ -191,25 +193,4 @@ a {
     transform: rotate(-45deg);
     top: 28px;
     left: -16px;
-}
-
-
-.block:last-child {
-    float: right;
-    margin-right: $indent;
-}
-
-@media all and (max-width: 1280px) {
-    .block:last-child {
-        float: left; 
-    }
-}
-
-@media all and (max-width: 900px) {
-    .block{
-		float: none; 
-	}
-    .block:nth-child(2){
-        float: none;
-    }	
 }
