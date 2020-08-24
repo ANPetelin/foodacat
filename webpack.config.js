@@ -1,24 +1,28 @@
 const path = require('path');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const webpack = require('webpack');
 
 module.exports = {
   module: {
     rules: [
       {
-          test: /\.css$/,
-          use: ExtractTextPlugin.extract({
-              use: ['css-loader'],
-              fallback: 'style-loader'
-          })
-      },
+        test: /\.(js|jsx)$/,
+        exclude: /node_modules/,
+        use: {
+          loader: "babel-loader"
+        }
+      }, 
       {
-          test: /\.scss$/,
-          use: ExtractTextPlugin.extract({
-              use: ['css-loader', 'sass-loader' ],
-              fallback: 'style-loader'
-          })
-      }
-    ],
+        test: /\.s[ac]ss$/i,
+        use: ['style-loader', 'css-loader'],
+      },     
+      {
+        test: /\.(gif|png|jpg|jpeg|svg)?$/,
+        loader: 'file-loader',
+        options: {
+          name: 'dist/assets/img/[name].[ext]',
+        },
+      }, 
+    ]
   },
   //mode: 'production',
   mode: 'development',
@@ -28,6 +32,6 @@ module.exports = {
     filename: 'bundle.js'
   },
   plugins: [
-    new ExtractTextPlugin('./css/style.css')
-]
-};
+    new webpack.SourceMapDevToolPlugin({})
+  ]
+}; 
