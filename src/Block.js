@@ -10,8 +10,7 @@ export default class Block extends React.Component {
         colorMassage: '',
         checked: false,
         changeColor: '',
-        classDisablet: '',
-        hover: false
+        classDisablet: ''
       }
     }
 
@@ -24,26 +23,26 @@ export default class Block extends React.Component {
     changeBlock(key) {
         if (key == 'click') {
             if(this.state.checked) {
-            this.setState ({ checked: !this.state.checked, changeColor: 'hover'})
+            this.setState ({ checked: !this.state.checked, changeColor: 'hover' })
             }
             else {
-                this.setState ({ checked: !this.state.checked, changeColor: 'checked'})
+                this.setState ({ checked: !this.state.checked, changeColor: 'checked' })
             }
         }
         else if (key == 'enter') {
             if(this.state.checked) {
-                this.setState ({hover: true, changeColor: 'checked', message: 'Сказочное заморское яство', colorMassage: ''})
+                this.setState ({ changeColor: 'checked', message: 'Сказочное заморское яство', colorMassage: '' })
             }
             else {
-                this.setState ({hover: true, changeColor: 'hover'})
+                this.setState ({ changeColor: 'hover' })
             }
         }
         else if (key == 'leave') {
             if(this.state.checked) {
-                this.setState ({hover: true, changeColor: 'checkedhover', message: 'Котэ не одобряет?', colorMassage: 'checkedhover '})
+                this.setState ({ changeColor: 'checkedhover', message: 'Котэ не одобряет?', colorMassage: 'checkedhover ' })
             }
             else {
-                this.setState ({hover: true, changeColor: ''})
+                this.setState ({ changeColor: '' })
             }
         }      
     }

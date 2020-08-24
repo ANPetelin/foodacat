@@ -37,7 +37,7 @@ class App extends React.Component {
     }
     render() {
         return (
-            <div className="body">
+            <div>
                 <h2>Ты сегодня покормил кота?</h2>
                 <div className="container">
                     {this.state.feeds.map((feed, index) => {
