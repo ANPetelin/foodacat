@@ -1,24 +1,18 @@
-$indent: 80px;
 $colorDefault: #1698D9;
 $colorDefaultHover: #2EA8E6;
 $colorSelected: #D91667;
 $colorSelectedHover: #E52E7A;
-
-* {   
-}
+$disabled: #b3b3b3;
 
 body {
     background-image: url("../img/background.png");
 }
 
-  
-.container {
-    width: 100%;
-    max-width: 1280px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;	
+p {
+    margin: 0;
+    padding: 0;
+    margin-top: 17px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
 }
 
 img {
@@ -28,191 +22,174 @@ img {
     border-bottom-left-radius: 12px;;
 }
 
-.blockText {
-    width: 190px;
-    float: left;
-    margin-left: 61px;
+.container {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;	
 }
 
-h1 {
-    font-size: 44px;
-    float: left;
+.header {
     margin: 0;
     padding: 0;
-    color: #000;
-}
-
-h2 {
-      margin: 0;
-      padding: 0;
-      padding-top: 36px;
-      color: white;
-      text-align: center;
-      font-weight: normal;
-      font-size: 38px;      
-}
-
-h3 {
-    margin: 0;
-    padding: 0;
-    font-size: 24px;
-    float: left;
-    color: #000;
-}
-
-p {
-    margin: 0;
-    padding: 0;
-    margin-top: 17px;
-}
-
-.textOutside {
-    color: #fff;
+    padding-top: 36px;
+    color: white;
     text-align: center;
-    font-size: 13px;
-}
-
-.disabletText {
-    color: #ffff66;
-}
-
-a {
-    color: #1698D9;
-}
-
-.circle {
-    width: 0px;
-    height: 0px;
-    border-radius: 50%;
-    border: 40px solid #1698D9;
-    position: absolute;
-    right: 12px;
-    bottom: 12px;
-}
-.textCircle {
-    color: #fff;
-    font-size: 45px;
-    margin:-33px;  
-}
-
-.weight {
-    font-size: 22px;
-    line-height: 0.7em;
-    padding-top: 30px;
-}
-
-.textInside {
-    color: #666;
-    font-size: 16px;
-    float: left;
-}
-
-.bottom {
-    display: block;
-    font-size: 14px;
-    text-align: left;
+    font-weight: normal;
+    font-size: 38px;
 }
 
 .block {
-      width: 312px;
-      height: 500px;
-      float: left;      
-      margin: 40px;
-      margin-top: 20px;
-      text-align: center;
+    width: 314px;
+    height: 500px;
+    float: left;
+    margin: 40px;
+    margin-top: 20px;
+    text-align: center;    
 }
 
-.blockInside {
+.block__inside {
     padding: 0;
     width: 312px;
     height: 471px;
-    border: 4px solid #1698D9;
+    border: 4px solid;
     border-radius: 12px;
     position: relative;
     text-align: center;
     background-color: #F2F2F2;
     clip-path: 
     polygon(
-      0 65.5px,     /* верхняя левая */
-      65.5px 0,     /* верхняя левая */
-      100% 0%,    /* верхняя правая */
-      100% 0%,   /* верхняя правая */
-      100% 100%,  /* нижняя правая */
-      100% 100%,  /* нижняя правая */
-      0% 100%,   /* нижняя левая */
-      0 100%      /* нижняя левая */
+    0 44px,     /* верхняя левая */
+    44px 0,     /* верхняя левая */
+    100% 0%,    /* верхняя правая */
+    100% 0%,   /* верхняя правая */
+    100% 100%,  /* нижняя правая */
+    100% 100%,  /* нижняя правая */
+    0% 100%,   /* нижняя левая */
+    0 100%      /* нижняя левая */
     );
-    background:linear-gradient(135deg, transparent 40px, #F2F2F2 0);
+    background:linear-gradient(135deg, transparent 27px, #F2F2F2 0);
 }
 
-.block:checked {
-
-    .blockInside {
-        border-color: $colorSelected;
-    }
-    .circle {
-        background-color: $colorSelected;
-    }
-    .blockInside::after {
-        background-color: $colorSelected;
-    }
-    a {
-        color: $colorSelected;
-    }
-}
-
-.blockInside::before {
+.block__inside::before {
     content: "";
     position: absolute;
-    width: 0;
-	height: 0;
-    top:-35px;
-    left: -12px;
-    height: 100px;
-    width: 45px;
+    top:-28px;
+    left: -5px;
+    height: 70px;
+    width: 28px;
     background-image: url("../img/background.png");
     transform: rotate(45deg);
-    border-top-left-radius: 45px;  
-    border-bottom-left-radius: 45px;  
+    border-top-left-radius: 25px;  
+    border-bottom-left-radius: 25px;  
 }
 
-.blockInside::after {
+.block__inside::after {
     content: "";
     position: absolute;
-    width: 88px;
+    width: 57px;
     height: 0;
     border:inherit;
     border-width: 2px;
     transform: rotate(-45deg);
-    top: 28px;
-    left: -16px;
+    top: 17px;
+    left: -11px;
 }
 
-.disablet {
-    border-color: #b3b3b3;
-    color: #b3b3b3;
+.block__inside__text {
+    width: 210px;
+    float: left;
+    margin-left: 50px;
+}
+
+.block__inside__text__information {
+    color: #666;
+    font-size: 16px;
+    float: left;
+}
+
+.block__inside__text__brand {
+    font-size: 44px;
+    font-weight: bold;
+    float: left;
+    color: #000;
+    margin-top: 5px;
+}
+
+.block__inside__text__filling {
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+    font-size: 24px;
+    float: left;
+    color: #000;
+}
+
+.block__inside__text__information__bottom__text {
+    display: block;
+    font-size: 14px;
+    text-align: left;
+}
+
+.text__outside {
+    color: #fff;
+    text-align: center;
+    font-size: 13px;
+    
+}
+
+.disabled__text__outside {
+    color: #ffff66;
+}
+
+.block__inside__circle {
+    width: 0px;
+    height: 0px;
+    border-radius: 50%;
+    border: 40px solid;
+    position: absolute;
+    right: 12px;
+    bottom: 12px;
+}
+.block__inside__circle__text {
+    color: #fff;
+    font-size: 45px;
+    margin:-33px;  
+}
+
+.block__inside__circle__text__weight {
+    font-size: 22px;
+    line-height: 0.7em;
+    padding-top: 30px;
+}
+
+.disabled {
+    border-color: $disabled;
+    color: $disabled;
 }
 
 .hover {
-    border-color: #2EA8E6;
-    color: #2EA8E6;
+    border-color: $colorDefaultHover;
+    color: $colorDefaultHover;
 }
 
 .checked {
-    border-color: #D91667;
-    color: #D91667;
+    border-color: $colorSelected;
+    color: $colorSelected;
 }
 
 .checkedhover {
-    border-color: #E52E7A;
-    color: #E52E7A;
+    border-color: $colorSelectedHover;
+    color: $colorSelectedHover;
 }
 
-.over {
-    border-color: #1698D9;
-    color: #1698D9;
+.colorDefault {
+    border-color: $colorDefault;
+    color: $colorDefault;
 }
 
-.opacity02 {
+.block__disabled {
     opacity: 0.2;
 }
