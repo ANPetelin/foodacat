@@ -3,7 +3,7 @@ import '../scss/style.scss';
 
 
 const BRAND = 'Нямушка';
-const DEFAULT_CAPTION = 'Сказочное заморское яство';
+const DEFAULT_CAPTION = 'Сказочное заморское яство ';
 const CHECKED_HOVER_CAPTION = 'Котэ не одобряет?';
 export default class Block extends React.Component {
     constructor(props) {
